@@ -15,16 +15,16 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
             <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right list-unstyled list-inline">
                 <li><a href="#welcome">Welcome</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#features">Features</a></li>
@@ -34,12 +34,11 @@
             </ul>
         </div>
     </nav>
-    <!--</div>-->
 
     <header id="welcome">
-        <div class="container-fluid header-box">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-md-offset-2">
                     <h1> Refresh yourself by yoga exercise</h1>
                     <p class="text-header">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
                 </div>
@@ -57,7 +56,6 @@
                     <h3><span class="section-numbers">01.</span> What is <span class="section-color-words">Yoga?</span></h3>
 
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-
 
                     <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
                 </div>
@@ -91,12 +89,11 @@
                         <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
                     </div>
                     <div class="col-md-6">
-                        <img src="./images/arrow.png">
+                        <img src="./images/arrow.png" class="hidden-xs" alt="arrow">
                         <button>Get your free registration</button>
                     </div>
                 </div>
             </section>
-
         </div>
 
 
@@ -258,39 +255,43 @@
 
 
     </main>
-    <footer class="container-fluid">
-       
-        <div class="row shape3 cta">
-            <div class="col-md-4 col-md-offset-2">
+    <footer>
+      <div class="shape3">
+       <div class="container-fluid cta">
+        <div class="row">
+            <div class="col-xs-12 col-md-5 col-md-offset-1">
                 <h2>Get your fitness back today</h2>
 
                 <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
             </div>
-            <div class="col-md-6">
-                <img src="./images/arrow.png">
+            <div class="col-xs-12 col-md-6">
+                <img src="./images/arrow.png" class="hidden-xs" alt="arrow">
                 <button>Get your free registration</button>
             </div>
         </div>
+        </div>
+        </div>
         
+        <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 col-md-offset-2">
+            <div class="col-xs-8 col-md-8">
                 <img src="./images/logo-footer.png" alt="Logo">
                 <p>&#169; Copyright 2016, jThemes All Rights Reserved</p>
             </div>
-            <div class="col-md-4">
-                <ul>
-                    <li><a href="">Sitemap</a></li>
-                    <li><a href="">Privacy & Policy</a></li>
-                    <li><a href="">Terms & Conditions</a></li>
+            <div class="col-xs-4 col-md-4">
+                <ul class="list-unstyled list-inline">
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
+        </div>
     </footer>
     
-</body>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="./js/app.js"></script>
-
-
+    
+</body>
 </html>

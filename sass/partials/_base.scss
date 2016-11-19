@@ -1,14 +1,9 @@
-//.container {
-//    width: 1000px;
-//    margin: 0 auto;
-//}
 .container-fluid {
     padding-top: 80px;
 }
-
 .row {
-  padding-right: 0px;
-  margin-right: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
 }
 header {
     background-image: url(../images/header.png);
@@ -17,52 +12,39 @@ header {
     min-height: 840px;
     margin: 0 auto;
 }
-//.header-box {
-//    width: 539px;
-//
-//}
 .text-header {
     font-size: 1.1em;
-    color: #ffffff;
+    color: #fff;
+}
+@mixin shape-basic {
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
 }
 .shape {
-    background-color: rgb(102, 169, 0);
+    @include shape-basic;
+    background-color: $lightgreen;
     background: url(../images/shape.png);
-    background-size: cover;
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
+    height: 80px;
 }
 .shape2 {
+    @include shape-basic;
     background: url(../images/shape2.png);
-    background-size: cover;
-    width: 100%;
     height: 300px;
-    margin: 0 auto;
     p {
-        font-family: 'Poppins', sans-serif;
+        font-family: $poppins;
         font-size: 1em;
     }
 }
 .shape3 {
+    @include shape-basic;
     background: url(../images/shape2.png);
-    background-size: cover;
-    height: 342px;
-    //    background-color: rgb(102, 169, 0);
+    height: 300px;
     //    top: 150px;
-}
-.cta {
-    padding-top: 100px;
-    letter-spacing: 2px;
-    p {
-        color: #fff;
-        letter-spacing: 2px;
-        font-size: 1em;
-    }
 }
 h1 {
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: $poppins;
     font-size: 5em;
     line-height: 1.04;
     text-align: left;
@@ -71,33 +53,33 @@ h1 {
 }
 h2 {
     color: #fff;
-    font-family: 'PT Serif', serif;
+    font-family: $ptserif;
     font-weight: bold;
     line-height: 1.875;
     text-align: center;
 }
 h3 {
     font-size: 2.5em;
-    font-family: 'Poppins', sans-serif;
+    font-family: $poppins;
     font-weight: 900;
     padding: 20px;
 }
-
 h5 {
     font-weight: 700;
 }
+//navbar
+.navbar-header {
+    height: 100px;
+}
+
 .navbar-default {
     background-color: transparent;
     border: 0px;
-    
     img {
         float: left;
         margin: 10px;
     }
     ul {
-        list-style-type: none;
-        display: inline-block;
-        float: right;
         padding: 15px;
         font-size: 1em;
     }
@@ -112,15 +94,22 @@ h5 {
                 text-decoration: none;
             }
             a:hover {
-                color: #66a900;
+                color: $lightgreen;
                 border-bottom: 2px solid #66a900;
             }
         }
     }
+    .navbar-toggle {
+        &:focus {
+            background-color: darkgreen;
+        }
+        .icon-bar {
+            background-color: #fff;
+        }
+    }
 }
-
 p {
-    font-family: 'PT Serif', serif;
+    font-family: $ptserif;
     font-size: 1.1em;
     color: #aeaeae;
     line-height: 30px;
@@ -128,10 +117,10 @@ p {
 .section-numbers {
     color: rgba(51, 51, 51, 0.15);
     font-size: 2.5em;
-    font-family: 'PT Serif', serif;
+    font-family: $ptserif;
 }
 .section-color-words {
-    color: #66a900;
+    color: $lightgreen;
 }
 .sub-text {
     font-weight: bold;
@@ -140,8 +129,8 @@ p {
     //    margin: 10px;
     .numbers {
         color: #fff;
-        font-family: 'PT Serif', serif;
-        background-color: #66a900;
+        font-family: $ptserif;
+        background-color: $lightgreen;
         border-radius: 50%;
         //        background-image: url(../../images/round.png);
         border: 3px solid #fff;
@@ -149,10 +138,18 @@ p {
         padding: 0.7em;
     }
 }
+// call-to-action
 .cta {
+    padding-top: 100px;
+    letter-spacing: 2px;
+    p {
+        color: #fff;
+        letter-spacing: 2px;
+        font-size: 1em;
+    }
     button {
-        background-color: #ffffff;
-        color: #66a900;
+        background-color: #fff;
+        color: $lightgreen;
         font-size: 1.1em;
         font-weight: 600;
         border: 0;
@@ -162,44 +159,39 @@ p {
         box-shadow: 0px 2px 32px 0px rgba(0, 0, 0, 0.03);
         width: 270px;
         height: 57px;
-    }
-    button:hover {
-        box-shadow: 0px 2px 32px 0px rgba(0, 0, 0, 0.3);
-        color: darkgreen;
+        &:hover {
+            box-shadow: 0px 2px 32px 0px rgba(0, 0, 0, 0.3);
+            color: darkgreen;
+        }
     }
 }
-
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-     height: 250px;
-     margin: 0 auto;
-  }
-
+// carousel
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    height: 250px;
+    margin: 0 auto;
+}
 .carousel-control.right {
     background: transparent;
 }
 .carousel-control.left {
     background: transparent;
 }
-
 .carousel-fade {
     .carousel-inner {
         .item {
             transition-property: opacity;
         }
-        
         .item,
         .active.left,
         .active.right {
             opacity: 0;
         }
-
         .active,
         .next.left,
         .prev.right {
             opacity: 1;
         }
-
         .next,
         .prev,
         .active.left,
@@ -208,15 +200,11 @@ p {
             transform: translate3d(0, 0, 0);
         }
     }
-
     .carousel-control {
         z-index: 2;
     }
 }
-
-
-
-
+// quote
 blockquote {
     border: 0;
     .quote {
@@ -225,14 +213,15 @@ blockquote {
     }
     .name {
         font-size: 16px;
-        font-family: 'Poppins';
+        font-family: $poppins;
         color: #333333;
         font-weight: 700;
     }
 }
+// panels
 .panel-default {
     border-radius: 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     box-shadow: 0px 12px 38px 0px rgba(0, 0, 0, 0.11);
     padding: 0;
     p {
@@ -245,8 +234,8 @@ blockquote {
     .panel-body {
         padding: 0;
         h4 {
-            border-left: 2px solid #66a900;
-            border-right: 2px solid #66a900;
+            border-left: 2px solid $lightgreen;
+            border-right: 2px solid $lightgreen;
             background-color: #f6f6f6;
             text-transform: uppercase;
             padding: 20px;
@@ -255,7 +244,6 @@ blockquote {
             color: #aaaaaa;
             font-weight: bold;
         }
-        
     }
     .panel-footer {
         background-color: #fff;
@@ -269,34 +257,29 @@ blockquote {
         }
     }
 }
-
-
 .panel {
     button {
         background: none;
         margin: 0;
         width: auto;
     }
-}
-
-.panel:hover {
-    h4 {
+    &:hover {
+        h4 {
             color: #fff;
-            background-color: #66a900;
+            background-color: $lightgreen;
         }
-    button {
+        button {
             color: #66a900;
-            border-bottom: 1px solid #66a900;
+            border-bottom: 1px solid $lightgreen;
             border-radius: 0;
             box-shadow: 0;
         }
+    }
 }
-
+// footer
 footer {
     padding-bottom: 40px;
     li {
-        list-style-type: none;
-        display: inline-block;
         float: right;
         padding: 15px;
         color: #9e9e9e;
