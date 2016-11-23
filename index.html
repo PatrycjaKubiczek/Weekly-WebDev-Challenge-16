@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <!--navigation mobile-->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -20,9 +20,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="logo"></a>
         </div>
-
+        <!--navigation desktop -->
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right list-unstyled list-inline">
                 <li><a href="#welcome">Welcome</a></li>
@@ -34,11 +34,11 @@
             </ul>
         </div>
     </nav>
-
+    <!--header-->
     <header id="welcome">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-md-offset-2">
+                <div class="col-sm-12 col-md-5 col-md-offset-2">
                     <h1> Refresh yourself by yoga exercise</h1>
                     <p class="text-header">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
                 </div>
@@ -50,6 +50,7 @@
     </div>
 
     <main>
+        <!-- about section -->
         <section class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-7" id="about">
@@ -68,36 +69,46 @@
 
         <section class="container">
             <div class="row">
-                <div class="col-md-5">
-                    <img class="img-responsive" src="./images/girl2.png" alt="Another model doing yoga">
-                </div>
-                <div class="col-md-7">
+                <div class="col-md-7 col-md-push-5">
                     <h3><span class="section-numbers">02.</span> Who can <span class="section-color-words">practice?</span></h3>
                     <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                    <p class="sub-text"><span class="numbers">1</span> Nam liber tempor cum soluta nobis eleifend option congue.</p>
-                    <p class="sub-text"><span class="numbers">2</span> Claritas est etiam processus dynamicus.</p>
+
+                    <div class="who-list">
+                        <div class="numbers">1</div>
+                        <p class="sub-text"> Nam liber tempor cum soluta nobis eleifend option congue.</p>
+                    </div>
+
+                    <div class="who-list">
+                        <div class="numbers">2</div>
+                        <p class="sub-text"> Claritas est etiam processus dynamicus.</p>
+                    </div>
                 </div>
+                <div class="col-md-5 col-md-pull-7">
+                    <img class="img-responsive" src="./images/girl2.png" alt="Another model doing yoga">
+                </div>
+
             </div>
         </section>
 
-        <div class="shape2">
-            <section class="container-fluid cta">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-2">
-                        <h2>Get your fitness back today</h2>
-
-                        <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="./images/arrow.png" class="hidden-xs" alt="arrow">
-                        <button>Get your free registration</button>
-                    </div>
+        <!--call-to-action-->
+        <div class="shape2"></div>
+        <div class="container-fluid cta">
+            <div class="row">
+                <div class="col-xs-12 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+                    <h2>Get your fitness back today</h2>
+                    <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
                 </div>
-            </section>
+                <div class="hidden-xs cta-arrow col-md-2 col-sm-2">
+                    <img src="./images/arrow.png" class="img-responsive" alt="arrow">
+                </div>
+                <div class="col-xs-12 col-md-4 col-sm-4">
+                    <button class="center-block">Get your free registration</button>
+                </div>
+            </div>
         </div>
 
 
-
+        <!--features section-->
         <section class="container">
             <div class="row">
                 <div class="col-md-12" id="features">
@@ -127,11 +138,10 @@
                         <img class="img-responsive" src="./images/group.png" alt="Yoga group">
                     </div>
                 </div>
-
-
             </div>
         </section>
 
+        <!--testimonia section-->
         <section class="container">
             <div class="row">
                 <div class="col-md-12" id="testimonila">
@@ -141,28 +151,51 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="myCarousel" class=" carousel slide carousel-fade" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
 
-
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <img src="./images/client1.png" class="img-responsive" alt="Jenny">
-                                </div>
-
-                                <div class="item">
-                                    <img src="./images/client2.png" class="img-responsive" alt="Jack">
-                                    <div class="carousel-caption">
+                                    <div class="col-md-6">
+                                        <img src="./images/client1.png" alt="Jenny" class="carousel-img center-block">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <blockquote>
+                                            <p class="quote">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.. </p>
+                                            <footer>
+                                                <p class="name">Jenny Duren</p>
+                                                <p>Student, Age: 26</p>
+                                            </footer>
+                                        </blockquote>
                                     </div>
                                 </div>
 
                                 <div class="item">
-                                    <img src="./images/client3.png" alt="John">
-                                    <div class="carousel-caption">
+                                    <div class="col-md-6">
+                                        <img src="./images/client2.png" alt="Jack" class="carousel-img center-block">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <blockquote>
+                                            <p class="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe delectus veniam magnam voluptates eum quisquam error a. Iure deserunt qui eos amet ipsam repellendus, suscipit, sapiente, doloremque esse dicta sequi!</p>
+                                            <footer>
+                                                <p class="name">Jack Kowalsky</p>
+                                                <p>Architect, Age: 30</p>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="col-md-6">
+                                        <img src="./images/client3.png" alt="John" class="carousel-img center-block">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <blockquote>
+                                            <p class="quote">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptatum laboriosam distinctio! Maiores delectus qui laudantium, nostrum iure. Eligendi, aut, reiciendis! Deserunt quasi omnis velit molestiae, cumque, pariatur laboriosam modi?lisi.. </p>
+                                            <footer>
+                                                <p class="name">John Doe</p>
+                                                <p>Cook, Age: 36</p>
+                                            </footer>
+                                        </blockquote>
                                     </div>
                                 </div>
                                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -175,21 +208,12 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <blockquote>
-                                <p class="quote">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.. </p>
 
-                                <footer>
-                                    <p class="name">Jenny Duren</p>
-                                    <p>Student, Age: 26</p>
-                                </footer>
-                            </blockquote>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        <!--pricing section-->
         <section class="container">
             <div class="row">
                 <div class="col-md-12" id="pricing">
@@ -255,43 +279,46 @@
 
 
     </main>
-    <footer>
-      <div class="shape3">
-       <div class="container-fluid cta">
-        <div class="row">
-            <div class="col-xs-12 col-md-5 col-md-offset-1">
-                <h2>Get your fitness back today</h2>
-
-                <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+   
+    
+        <div class="shape3"></div>
+        <div class="container-fluid cta">
+           <div class="row">
+                <div class="col-xs-12 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+                    <h2>Get your fitness back today</h2>
+                    <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                </div>
+                <div class="hidden-xs cta-arrow col-md-2 col-sm-2">
+                    <img src="./images/arrow.png" class="img-responsive" alt="arrow">
+                </div>
+                <div class="col-xs-12 col-md-4 col-sm-4">
+                    <button class="center-block">Get your free registration</button>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <img src="./images/arrow.png" class="hidden-xs" alt="arrow">
-                <button>Get your free registration</button>
-            </div>
         </div>
-        </div>
-        </div>
-        
+ <!-- footer section-->
+<footer>
         <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-8 col-md-8">
-                <img src="./images/logo-footer.png" alt="Logo">
-                <p>&#169; Copyright 2016, jThemes All Rights Reserved</p>
+            <div class="row">
+                <div class="col-xs-8 col-md-8">
+                    <img src="./images/logo-footer.png" alt="Logo">
+                    <p>&#169; Copyright 2016, jThemes All Rights Reserved</p>
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Privacy & Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-xs-4 col-md-4">
-                <ul class="list-unstyled list-inline">
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Privacy & Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-        </div>
         </div>
     </footer>
-    
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="./js/app.js"></script>
-    
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+
 </body>
+
 </html>
