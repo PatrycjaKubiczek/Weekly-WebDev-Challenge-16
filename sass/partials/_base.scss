@@ -1,14 +1,16 @@
 //* {
 //    border: 1px solid red;
 //}
+html {
+    font-size: 16px;
+}
+//.row {
+//    padding-right: 0;
+//    margin-right: 0;
+//}
 
-.container-fluid-top {
-    padding-top: 80px;
-}
-.row {
-    padding-right: 0px;
-    margin-right: 0px;
-}
+
+//header
 header {
     background-image: url(../images/header.png);
     background-size: cover;
@@ -17,15 +19,29 @@ header {
     min-height: 100vh;
     margin: 0 auto;
 }
-.text-header {
+.heading {
+    text-transform: uppercase;
+    font-family: $poppins;
+    font-size: 5em;
+    @media #{$phone} {
+        font-size: 3em;
+    }
+    line-height: 1.04;
+    text-shadow: 0px 2px 16px rgba(0, 0, 0, 0.29);
+    margin-top: 20vh;
+}
+.subheading {
     font-size: 1.1em;
     color: #fff;
 }
+
+//bg shapes
 @mixin shape-basic {
     background-size: cover;
-    width: 100%;
-    margin: 0 auto;
+//    width: 100%;
+//    margin: 0 auto;
 }
+
 .shape {
     @include shape-basic;
     background-color: $lightgreen;
@@ -36,10 +52,6 @@ header {
     @include shape-basic;
     background: url(../images/shape2.png);
     height: 150px;
-    p {
-        font-family: $poppins;
-        font-size: 1em;
-    }
 }
 .shape3 {
     @include shape-basic;
@@ -47,42 +59,30 @@ header {
     height: 200px;
     //    top: 150px;
 }
-h1 {
-    text-transform: uppercase;
-    font-family: $poppins;
-    font-size: 5em;
-    line-height: 1.04;
-    text-align: left;
-    text-shadow: 0px 2px 16px rgba(0, 0, 0, 0.29);
-    margin-top: 20vh;
-}
+
 h2 {
     color: #fff;
     font-family: $ptserif;
     font-weight: bold;
-//    line-height: 1.875;
+    //    line-height: 1.875;
     text-align: center;
 }
 h3 {
     font-size: 2.5em;
     font-family: $poppins;
-    font-weight: 900;
+    font-weight: bold;
     padding: 20px;
 }
 h5 {
     font-weight: 700;
 }
 //navbar
-.navbar-header {
-    height: 100px;
-}
-
 .navbar-default {
     background-color: transparent;
     border: 0px;
     img {
         float: left;
-        margin: 10px;
+        padding-bottom: 10px;
     }
     ul {
         padding: 15px;
@@ -103,6 +103,7 @@ h5 {
         }
     }
     .navbar-toggle {
+        margin: 20px 10px;
         &:focus {
             background-color: darkgreen;
         }
@@ -125,32 +126,26 @@ p {
 .section-color-words {
     color: $lightgreen;
 }
-
 .who-list {
     display: flex;
     align-items: baseline;
 }
-
 .sub-text {
     font-weight: bold;
     line-height: 3.5em;
-    
 }
-
 .numbers {
-        height: 50px;
-        width: 50px;
-        color: #fff;
-        font-family: $ptserif;
-        background-color: #66a900;
-        border-radius: 50%;
-      
-        text-align: center;
-        vertical-align: middle;
-        line-height: 50px;
-        margin: 10px;
-    }
-
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    font-family: $ptserif;
+    background-color: #66a900;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    margin: 10px;
+}
 // call-to-action
 .cta {
     background-color: $lightgreen;
@@ -167,7 +162,7 @@ p {
         font-weight: 600;
         border: 0;
         padding: 20px;
-//        margin: 40px;
+        //        margin: 40px;
         border-radius: 3px;
         box-shadow: 0px 2px 32px 0px rgba(0, 0, 0, 0.03);
         &:hover {
@@ -175,17 +170,15 @@ p {
             color: darkgreen;
         }
     }
-    .cta-arrow{
+    .cta-arrow {
         margin-top: 50px;
     }
 }
 // carousel
-
 .carousel-img {
     height: 250px;
     margin: 0 auto;
 }
-
 .carousel-control.right {
     background: transparent;
     margin-right: -10px;
@@ -217,27 +210,27 @@ p {
             transform: translate3d(0, 0, 0);
         }
     }
-//    .carousel-control {
-//        z-index: 2;
-//    }
+    //    .carousel-control {
+    //        z-index: 2;
+    //    }
 }
-
 .carousel-indicators {
     li {
         background-color: $lightgreen;
     }
 }
-
-.glyphicon-chevron-right:before, .glyphicon-chevron-right:after,  {
-        color: $lightgreen;
-    margin-right:-100px;
-    }
-
-.glyphicon-chevron-left:before, .glyphicon-chevron-left:after, {
+.glyphicon-chevron-right:before,
+.glyphicon-chevron-right:after,
+{
+    color: $lightgreen;
+    margin-right: -100px;
+}
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-left:after,
+{
     color: $lightgreen;
     margin-left: -100px;
 }
-    
 // quote
 blockquote {
     border: 0;
@@ -295,7 +288,7 @@ blockquote {
     button {
         background: none;
         margin: 0;
-        width: auto;
+        //        width: auto;
     }
     &:hover {
         h4 {
