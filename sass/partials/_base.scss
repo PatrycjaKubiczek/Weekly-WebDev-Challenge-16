@@ -2,7 +2,7 @@
 //    border: 1px solid red;
 //}
 html {
-    font-size: 16px;
+    font-size: 14px;
     @media #{$phone} {
         font-size: 12px;
     }
@@ -60,7 +60,7 @@ header {
 .shape3 {
     @include shape-basic;
     background-image: url(../images/shape3.png);
-    height: 290px;
+    height: 150px;
 }
 h2 {
     color: #fff;
@@ -218,7 +218,6 @@ blockquote {
     border: 0;
     .quote {
         font-style: italic;
-        font-size: 0.875rem;
     }
     .name {
         font-family: $poppins;
